@@ -52,12 +52,12 @@ int main(int argc, char **argv)
         pthread_t t;
         int *pclient = (int*)malloc(sizeof(int));
         *pclient = client_socket;
-        // pthread_create(&t, NULL, handle_connection, pclient);
+        pthread_create(&t, NULL, handle_connection, pclient);
         
         /*
         If you dont want to use thread, the request will be handled sequentially
         */
-        handle_connection(pclient);
+        // handle_connection(pclient);
 
 
     } //while
