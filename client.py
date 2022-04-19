@@ -13,3 +13,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     byt = message.encode()
     os.system(byt)
     s.send(byt)
+
+    # Change to test if it works
